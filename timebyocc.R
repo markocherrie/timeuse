@@ -1,4 +1,5 @@
 ##########################################################################################
+library(dplyr)
 
 # read in the data
 df<-read.csv("data/UKDA-8128-tab/tab/uktus15_diary_ep_long.tab", sep="\t")
@@ -112,7 +113,7 @@ dev.off()
 }
 
 
-timeforeachdsoc("occ", T, "Home", 1, NA)
+#timeforeachdsoc("occ", T, "Home", 1, NA)
 timeforeachdsoc("occ", T, "Working place or school", 1, NA)
 timeforeachdsoc("occ", T, "Working place or school", 2, NA)
 timeforeachdsoc("occ", T, "Working place or school", 3, NA)
@@ -123,25 +124,8 @@ timeforeachdsoc("occ", T, "Working place or school", 7, NA)
 timeforeachdsoc("occ", T, "Working place or school", 8, NA)
 timeforeachdsoc("occ", T, "Working place or school", 9, NA)
 
-######
-
-# old command
-
-timeforeachdsoc("occ", F, NA , 1, NA)
-
-
-timeforeachdsoc("occ", 1, NA)
-timeforeachdsoc("occ", 2, NA)
-timeforeachdsoc("occ", 3, NA)
-timeforeachdsoc("occ", 4, NA)
-timeforeachdsoc("occ", 5, NA)
-timeforeachdsoc("occ", 6, NA)
-timeforeachdsoc("occ", 7, NA)
-timeforeachdsoc("occ", 8, NA)
-timeforeachdsoc("occ", 9, NA)
-
-timeforeachdsoc("ind", NA, 14280417)
-timeforeachdsoc("ind", NA, 12201003)
+# for individuals
+timeforeachdsoc("ind", F, NA,NA, serialid=12201003)
 
 
 ##################################
